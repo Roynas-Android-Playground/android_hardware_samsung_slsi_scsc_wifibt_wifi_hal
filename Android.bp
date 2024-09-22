@@ -21,10 +21,12 @@ cc_library_static {
     include_dirs: [
         "system/core/include",
         "external/libnl/include",
-        "hardware/libhardware_legacy/include/hardware_legacy",
         "external/wpa_supplicant_8/src/drivers",
     ],
 
     cflags: ["-Wno-unused-parameter"],
-    header_libs: ["liblog_headers"],
+    header_libs: [
+        "liblog_headers",
+        "wifi_legacy_headers",
+    ],
 }
